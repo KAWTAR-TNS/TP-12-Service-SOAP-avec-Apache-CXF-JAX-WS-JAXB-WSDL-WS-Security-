@@ -7,3 +7,15 @@
 | `<portType>` | `<wsdl:operation>`, `<wsdl:input>`, `<wsdl:output>` | Représente l'interface métier abstraite. Il définit les opérations du service (méthodes) sans référence à un protocole (ex. : les opérations FindPerson et SayHello). |
 | `<binding>` | `<soap:binding>`, `<soap:operation>` | Décrit le protocole concret. Il mappe le portType au protocole SOAP sur HTTP et spécifie l'encodage (style="document"). |
 | `<service>` | `<wsdl:port>`, `<soap:address location="...">` | Fournit le point d'accès physique (Endpoint). Il indique l'URL réelle où le service est déployé et accessible (ex. : http://localhost:8080/services/hello). |
+
+
+## Exemple de WSDL Généré
+<table align="center">
+  <tr>
+    <td align="center" style="border: 2px solid #007acc; padding: 10px; border-radius: 8px;">
+      <img src="docs/1.png" alt="Structure WSDL" width="600"/>
+      <br/>
+      <em>Structure WSDL générée - Service SOAP CXF</em>
+    </td>
+  </tr>
+</table>
