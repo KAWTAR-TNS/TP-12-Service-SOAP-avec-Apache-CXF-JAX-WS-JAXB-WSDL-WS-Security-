@@ -29,7 +29,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.apache.wss4j</groupId>
+      <artifactId>wss4j-ws-security-common</artifactId>
+      <version>3.0.0</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-frontend-jaxws</artifactId>
@@ -65,27 +69,30 @@
     </dependency>
 
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>${cxf.version}</version>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>
-        <configuration>
-          <useModulePath>false</useModulePath>
-        </configuration>
-      </plugin>
+        <executions>
+          <execution>
+            <id>wsdl-to-java</id>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
 
+            <configuration>
+              <wsdlUrls>
+                <wsdlUrl>http://localhost:8080/services/hello?wsdl</wsdlUrl>
+              </wsdlUrls>
+            </configuration>
+
+          </execution>
+        </executions>
+
+      </plugin>
     </plugins>
   </build>
 

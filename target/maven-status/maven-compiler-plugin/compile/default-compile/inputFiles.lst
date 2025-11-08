@@ -1,1 +1,4 @@
-D:\S9\Architecture\Tps\TP12\soap-cxf-service\src\main\java\com\acme\cxf\App.java
+D:\S9\Architecture\Tps\TP12\soap-cxf-service\src\main\java\com\acme\cxf\api\HelloService.java
+D:\S9\Architecture\Tps\TP12\soap-cxf-service\src\main\java\com\acme\cxf\impl\HelloServiceImpl.java
+D:\S9\Architecture\Tps\TP12\soap-cxf-service\src\main\java\com\acme\cxf\model\Person.java
+D:\S9\Architecture\Tps\TP12\soap-cxf-service\src\main\java\com\acme\cxf\Server.java
